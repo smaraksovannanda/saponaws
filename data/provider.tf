@@ -5,9 +5,9 @@ terraform {
       version = "5.30.0"
     }
   }
-  # backend "s3" {
-  #   bucket = "deloitte-cms-terraform-backend-do-not-delete"
-  #   key    = "corning-terraform-state"
-  #   region = "us-east-1"
-  # }
+  backend "s3" {
+    bucket = "pocsmarak"
+    key    = "terraform-state"
+    region = "ap-south-1"
+  }
 }

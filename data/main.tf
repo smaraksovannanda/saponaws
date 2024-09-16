@@ -1,6 +1,6 @@
-data "aws_ami" "sap-vm" {
-  most_recent = true
-}
+# data "aws_ami" "sap-vm" {
+#   most_recent = true
+# }
 data "aws_vpc" "nprd" {
   filter {
     name = "tag:Name"

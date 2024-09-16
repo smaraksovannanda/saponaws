@@ -1,7 +1,7 @@
 ################ sap vm ##########
 server_name      = "terraform_poc"
 instancetype     = "t3.micro"
-#image_id         = "ami-02b49a24cfb95941c"
+image_id         = "ami-0e53db6fd757e38c7"
 key_name         = "smarak"
 root_volume_type = "gp3"
 root_ebssize     = 75

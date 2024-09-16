@@ -5,10 +5,10 @@ variable "instancetype" {
   type = string
   #default = "t2.large"
 }
-# variable "image_id" {
-#   type        = string
-#   description = ""
-# }
+variable "image_id" {
+  type        = string
+  description = ""
+}
 variable "private_ip" {
   type = string
 }

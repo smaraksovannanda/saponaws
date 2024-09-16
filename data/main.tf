@@ -26,7 +26,7 @@ data "aws_kms_key" "poc_terraform" {
 ###### Application Server ######
 
 module "sap-vm" {
-  source           = "../../saponaws/modules/ec2"
+  source           = "../modules/ec2"
   depends_on = [ module.poc_sg ]
   #image_id         = var.image_id
   image_id = data.aws_ami.sap-vm.id
@@ -59,7 +59,7 @@ module "sap-vm" {
 }
 
 module "poc_sg" {
-  source      = "../../saponaws/modules/sg"
+  source      = "../modules/sg"
   vpc_id      = data.aws_vpc.nprd.id
   from_port   = var.from_port
   to_port     = var.to_port
@@ -68,7 +68,7 @@ module "poc_sg" {
 }
 
 module "ebs-volumes" {
-  source      = "../../saponaws/modules/ebs"
+  source      = "../modules/ebs"
   kms_id      = data.aws_kms_key.poc_terraform.arn
   instance_id = module.sap-vm.sap-vm-instance-id
   server_name = var.server_name

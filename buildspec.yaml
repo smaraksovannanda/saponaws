@@ -14,20 +14,22 @@ phases:
   pre_build:
     commands:
       - echo Initializing Terraform
-      - cd ${CODEBUILD_SRC_DIR}/
+      - pwd
+      - cd ${CODEBUILD_SRC_DIR}/data
       - terraform init
 
   build:
     commands:
       - echo Validating Terraform configuration
       - terraform validate
+      - aws --version
       - echo Planning Terraform changes
-      - terraform plan -out=tfplan
+      - terraform plan
 
   post_build:
     commands:
       - echo Applying Terraform changes
-      - terraform apply -auto-approve tfplan
+      - terraform apply -auto-approve
 
 artifacts:
   files:

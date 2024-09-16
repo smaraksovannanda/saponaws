@@ -28,8 +28,8 @@ data "aws_kms_key" "poc_terraform" {
 module "sap-vm" {
   source           = "../modules/ec2"
   depends_on = [ module.poc_sg ]
-  #image_id         = var.image_id
-  image_id = data.aws_ami.sap-vm.id
+  image_id         = var.image_id
+  #image_id = data.aws_ami.sap-vm.id
   instancetype     = var.instancetype
   server_name      = var.server_name
   key_name         = var.key_name

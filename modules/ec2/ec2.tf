@@ -44,5 +44,5 @@ resource "aws_instance" "sap-vm" {
 }
 resource "aws_ec2_instance_state" "sap-vm" {
   instance_id = aws_instance.sap-vm.id
-  state       = "stopped"
+  state       = "running"
 }

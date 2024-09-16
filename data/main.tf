@@ -86,7 +86,7 @@ module "ebs-volumes" {
 }
 
 module "efs" {
-  source                 = "../../Server_Build_DO_NOT_DELETE/modules/efs"
+  source                 = "../modules/efs"
   efs_vpc_id             = var.efs_vpc_id
   efs_name               = var.efs_name
   efs_pvt_sub_01         = var.efs_pvt_sub_01

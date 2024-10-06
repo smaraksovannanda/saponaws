@@ -30,7 +30,6 @@ phases:
     commands:
       - echo Applying Terraform changes
       - terraform apply -auto-approve
-      # - terraform destroy -auto-approve
 
 artifacts:
   files:

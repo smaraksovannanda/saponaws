@@ -29,7 +29,7 @@ phases:
   post_build:
     commands:
       - echo Applying Terraform changes
-      - terraform destroy -auto-approve
+      - terraform apply -auto-approve
 
 artifacts:
   files:

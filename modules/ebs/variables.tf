@@ -1,8 +1,8 @@
 variable "instance_id" {  
 }
-variable "kms_id" {
-  type = string
-}
+# variable "kms_id" {
+#   type = string
+# }
 variable "server_name" {
   type = string
   #default = "t2.large"

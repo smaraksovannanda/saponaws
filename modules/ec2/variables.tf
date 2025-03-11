@@ -41,9 +41,9 @@ variable "subnet_id" {
 variable "vpc_security_group_ids" {
   
 }
-variable "kms_id" {
+# variable "kms_id" {
   
-}
+# }
 
 ##### SAP VM TAGS ######
 

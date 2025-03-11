@@ -91,7 +91,7 @@ module "efs" {
   efs_name               = var.efs_name
   efs_pvt_sub_01         = var.efs_pvt_sub_01
   efs_pvt_sub_02         = var.efs_pvt_sub_02
-  kms_id                 = data.aws_kms_key.poc_terraform.arn
+  #kms_id                 = data.aws_kms_key.poc_terraform.arn
   performance_mode       = var.performance_mode
   throughput_mode        = var.throughput_mode
   availability_zone_name = var.availability_zone_name

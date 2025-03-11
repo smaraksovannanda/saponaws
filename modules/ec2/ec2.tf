@@ -35,7 +35,7 @@ resource "aws_instance" "sap-vm" {
     volume_type = var.root_volume_type
     /* VOLUME_KMS_KEY = var.VOLUME_KMS_KEY */
     encrypted             = true
-    kms_key_id            = var.kms_id
+    # kms_key_id            = var.kms_id
     delete_on_termination = true
     tags = {
       Name = "${var.server_name}-root"

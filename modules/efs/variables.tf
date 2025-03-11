@@ -8,8 +8,8 @@ variable "efs_pvt_sub_02" {
 # }
 variable "efs_name" {  
 }
-variable "kms_id" {
-}
+# variable "kms_id" {
+# }
 variable "performance_mode" {  
 }
 variable "throughput_mode" {  

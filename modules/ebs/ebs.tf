@@ -7,7 +7,7 @@ resource "aws_ebs_volume" "data_volume" {
   type              = each.value.disk_type
   iops              = each.value.iops
   encrypted  = true
-  kms_key_id = var.kms_id
+  # kms_key_id = var.kms_id
   tags = {
     Name = each.value.name
   }

@@ -1,6 +1,6 @@
 resource "aws_efs_file_system" "efs-storage" { 
   encrypted          = "true"
-  kms_key_id            = var.kms_id
+  # kms_key_id            = var.kms_id
   performance_mode   = var.performance_mode
   throughput_mode    = var.throughput_mode
   # availability_zone_name = var.availability_zone_name  

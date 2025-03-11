@@ -13,9 +13,9 @@ data "aws_subnet" "pub_subnet" {
     values = ["Pub_subnet"]
   }  
 }
-data "aws_kms_key" "poc_terraform" {
-  key_id = "alias/POC_terraform"
-}
+# data "aws_kms_key" "poc_terraform" {
+#   key_id = "alias/POC_terraform"
+# }
 # data "aws_security_group" "sg" {
 #   filter {
 #     name = "tag:Name"
@@ -39,7 +39,7 @@ module "sap-vm" {
   # iam_profile = var.iam_profile
   vpc_id     = data.aws_vpc.nprd.id
   subnet_id  = data.aws_subnet.pub_subnet.id
-  kms_id     = data.aws_kms_key.poc_terraform.arn
+  # kms_id     = data.aws_kms_key.poc_terraform.arn
   private_ip = var.private_ip
   ########## EC2 TAGS ########
   PRIMARYCONTACT = var.PRIMARYCONTACT
@@ -69,7 +69,7 @@ module "poc_sg" {
 
 module "ebs-volumes" {
   source      = "../modules/ebs"
-  kms_id      = data.aws_kms_key.poc_terraform.arn
+  #kms_id      = data.aws_kms_key.poc_terraform.arn
   instance_id = module.sap-vm.sap-vm-instance-id
   server_name = var.server_name
   disk = {

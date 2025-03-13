@@ -218,3 +218,42 @@ variable "throughput_mode" {
 }
 variable "availability_zone_name" {
 }
+
+######### VPC & SUBNET ###########
+
+variable "tag_name" {
+   default = "prod-vpc"
+}
+
+variable "vpc-cidr" {
+   default = "192.0.0.0/16"
+}
+
+variable "basename" {
+   description = "Prefix used for all resources names"
+   default = "nbo"
+}
+
+variable "az1" {
+  
+}
+
+variable "az2" {
+  
+}
+
+variable "az3" {
+  
+}
+
+variable "cidr1" {
+  
+}
+
+variable "cidr2" {
+  
+}
+
+variable "cidr3" {
+  
+}

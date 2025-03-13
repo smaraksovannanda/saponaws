@@ -98,3 +98,14 @@ module "efs" {
   vpc_security_group_ids = module.poc_sg.security_group_id
   
 }
+
+module "vpc" {
+  source = "../modules/vpc"
+  vpc-cidr = var.vpc-cidr
+  basename = var.basename
+  prefix = {
+    "sub-1" = {az = var.az1, cidr = var.cidr1}
+    "sub-2" = {az = var.az2, cidr = var.cidr2}
+    "sub-3" = {az = var.az3, cidr = var.cidr3}
+  }
+}

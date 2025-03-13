@@ -21,3 +21,11 @@ output "security_group_name" {
 output "efs-id" {
   value = module.efs.efs-output-id
 }
+
+######## vpc & subnet output ######
+output "subnet_id" {
+  value = module.vpc.sub-1-cidr
+}
+output "vpc_id" {
+  value = module.vpc.vpc_id
+}

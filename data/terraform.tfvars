@@ -103,3 +103,11 @@ performance_mode       = "generalPurpose"
 throughput_mode        = "elastic"
 availability_zone_name = "regional"
 
+########## VPC & SUBNET ########
+
+az1 = "aps1-az1"
+az2 = "aps1-az2"
+az3 = "aps1-az3"
+cidr1 = "192.0.198.0/24"
+cidr2 = "192.0.199.0/24"
+cidr3 = "192.0.200.0/24"
